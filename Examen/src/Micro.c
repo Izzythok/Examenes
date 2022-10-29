@@ -701,13 +701,9 @@ int eMicro_PorcentajeTipoVip(eMicro lista[], int longitud, eEmpresa listaE[], in
 				if(lista[j].idEmpresa == Array[i].Id && lista[j].idTipo == IDVIP)
 				{
 					Array[i].Acumulador++;
+					acumuladorVIP++;
 				}
 			}
-		}
-
-		for(int h=0;h<TamE;h++)
-		{
-			acumuladorVIP=+Array[h].Acumulador;
 		}
 
 		eEmpresa_IngresarId(listaE, TamE, &idEmpresa);
@@ -722,7 +718,7 @@ int eMicro_PorcentajeTipoVip(eMicro lista[], int longitud, eEmpresa listaE[], in
 			}
 		}
 
-		porcentaje=(float)valor*acumuladorVIP/100;
+		porcentaje=(float)(valor*100)/acumuladorVIP;
 
 		printf("El porcetaje es: %.2f\n",porcentaje);
 
