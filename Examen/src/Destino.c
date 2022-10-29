@@ -8,10 +8,10 @@
 
 #include "Destino.h"
 
-int idAutoincrementalDes = 20000;
+int eDestino_idAutoincremental = 20000;
 int eDestino_ObtenerIdUnico()
 {
-	return idAutoincrementalDes++;
+	return eDestino_idAutoincremental++;
 }
 
 int eDestino_CargarDescripcion(eDestino ListaL[], int TamL, int idDestino, char* DescrDestino)
@@ -52,9 +52,11 @@ int eDestino_MostrarTodos(eDestino lista[], int longitud)
 		printf("----------------------------------------------------------------\n");
 		for(int i=0;i<longitud;i++)
 		{
+			if(lista[i].isEmpty==OCUPADO)
+			{
 				eDestino_MostrarUno(&lista[i]);
 				bandera=0;
-
+			}
 		}
 		if(bandera)
 		{
@@ -76,7 +78,7 @@ int eDestino_IngresarId(eDestino lista[], int longitud, int* ID)
 	{
 		eDestino_MostrarTodos(lista, longitud);
 		do{
-			Errores=getIntSinRango("Ingrese el id de la Destino", "Error! debe ingresar el Id de la Tabla", 3, &Auxid);
+			Errores=getIntSinRango("Ingrese el id del Destino", "Error! debe ingresar el Id de la Tabla", 3, &Auxid);
 			rtn=0;
 			if(Errores)
 			{

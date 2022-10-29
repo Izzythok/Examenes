@@ -12,11 +12,14 @@
 #include "IngresoDeDatos.h"
 
 #define TAM_Destino 4
+#define VACIO 1
+#define OCUPADO 0
 
 typedef struct{
 	int id;
 	char Descripcion[25];
 	float Precio;
+	int isEmpty;
 }eDestino;
 
 /*Solo esta en el .h por el harcodeo*/

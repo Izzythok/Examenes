@@ -71,32 +71,7 @@ int InicializarArray(int* pArray, int CantPosiciones);
 /// @return devuelve 1 si salio todo OK si no 0.
 int InicializarArrayFlotante(float* pArray, int CantPosiciones);
 
-/// @fn Verifica si hay un valor repetido mediante la carga del vector.
-/// @param pArray: recibe el vector.
-/// @param CantPosiciones: recibe las posiciones.
-/// @param index: recibe el index de la ultima posicion cargada en el vector
-/// @return Devuelve 1 si no hay repetidos o -1 si hay repetido
-int VerifivarValorRepitidoArray(int* pArray,int CantPosiciones, int Valor, int index);
 
-/// @fn Imprime los datos del vector de todas las posiciones
-/// @param pArray: recibe el vector.
-/// @param CantPosiciones: recibe las posiciones.
-/// @return Devuelve el valor multiplicado.
-int ImprimirArray(int* pArray, int CantPosiciones);
-
-/// @fn Copia un vector a otro de enteros
-/// @param pArray: recibe un vector.
-/// @param pArray2: recibe otro vector a copiar.
-/// @param CantPosiciones: recibe las posiciones.
-/// @return Devuelve el valor multiplicado.
-int CopiarArrayDeEnteros(int* pArray, int* pArray2, int CantPosiciones);
-
-/// @fn Ordena un vector de valores numericos de manera ascendente y descendente.
-/// @param pArray recibe le Array con los valores.
-/// @param CantPosiciones Recibe la cantidad de posiciones del vector
-/// @param criterio indicar si es ascendente (1) o descendente (0)
-/// @return retorna 1 si ordeno el vector si no 0
-int OrdenarVector(int* pArray, int CantPosiciones, int criterio);
 
 /// @fn la cadena de caracteres ingresada se testea que no deborde la longitud indicada
 /// @param mensaje Recibe el Mensaje de aviso de lo que pide ingresar.
